@@ -1,0 +1,20 @@
+package br.uninove.testes;
+
+import br.uninove.dao.Usuario;
+import br.uninove.dao.UsuarioDao;
+
+public class _05ProgramaPrincipalBuscarPorCodigo {
+
+	public static void main(String[] args) {
+		
+		UsuarioDao usuarioDao = new UsuarioDao();
+		Usuario usuario = usuarioDao.buscarPorCodigo(3);
+		
+		System.out.println("Codigo: " + usuario.getCodigo());
+		System.out.println("Nome: " + usuario.getNome());
+		System.out.println("Login: " + usuario.getLogin());
+		System.out.println("Senha: " + usuario.getSenha());
+
+	}
+
+}
