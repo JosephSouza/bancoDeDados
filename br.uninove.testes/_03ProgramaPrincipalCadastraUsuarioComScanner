@@ -1,0 +1,29 @@
+package br.uninove.testes;
+
+import java.util.Scanner;
+
+import br.uninove.dao.Usuario;
+import br.uninove.dao.UsuarioDao;
+
+public class _03ProgramaPrincipalCadastraUsuarioComScanner {
+
+	public static void main(String[] args) {
+		
+		Scanner leitor = new Scanner(System.in);
+		Usuario usuario = new Usuario();
+		
+		System.out.print("Nome: ");
+		usuario.setNome(leitor.nextLine());
+		
+		System.out.print("Login: ");
+		usuario.setLogin(leitor.nextLine());
+		
+		System.out.print("Senha: ");
+		usuario.setSenha(leitor.nextLine());
+		
+		UsuarioDao usuarioDao = new UsuarioDao();
+		usuarioDao.cadastrar(usuario);
+
+		leitor.close();
+
+	}
