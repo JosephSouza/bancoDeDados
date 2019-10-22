@@ -1,0 +1,18 @@
+package br.uninove.testes;
+
+import java.util.Scanner;
+
+import br.uninove.dao.UsuarioDao;
+
+public class _06ProgramaPrincipalExcluir {
+
+	public static void main(String[] args) {
+		
+		Scanner leitor = new Scanner(System.in);
+		UsuarioDao usuarioDao = new UsuarioDao();
+		System.out.println("Digite Código para excluir");
+		usuarioDao.excluir(leitor.nextInt());
+		leitor.close();
+	}
+
+}
