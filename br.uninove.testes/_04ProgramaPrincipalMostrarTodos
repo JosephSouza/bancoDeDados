@@ -1,0 +1,26 @@
+package br.uninove.testes;
+
+import java.util.ArrayList;
+
+import br.uninove.dao.Usuario;
+import br.uninove.dao.UsuarioDao;
+
+public class _04ProgramaPrincipalMostrarTodos {
+
+	public static void main(String[] args) {
+		
+		UsuarioDao usuarioDao = new UsuarioDao();
+		ArrayList<Usuario> usuariosRecebidos = usuarioDao.mostrarTodos();
+		
+		for (Usuario usuario : usuariosRecebidos) {
+			System.out.println("CÃ³digo: " + usuario.getCodigo());
+			System.out.println("Nome: " + usuario.getNome());
+			System.out.println("Login: " + usuario.getLogin());
+			System.out.println("Senha: " + usuario.getSenha());
+			System.out.println("==============================");
+		}
+		
+
+	}
+
+}
