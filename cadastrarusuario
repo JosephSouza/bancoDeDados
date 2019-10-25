@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Cadastro de Usuário</title>
+</head>
+<body>
+ <h1>Cadastro de Usuário</h1>
+ <form  method="post"action="cadastroservlet.bo">
+ 			<label>Nome:</label>
+ 			<input type="text" name = "txtnome"><br><br>
+ 
+ 			<label>Login:</label>
+ 			<input type="text" name="txtlogin"><br><br>
+
+			 <label>Senha:</label>
+		 	<input type="password" name="txtsenha"><br><br>
+ 
+ 			<input type="submit" value="Cadastrar Usuário">
+  	</form>
+  </body>
+</html>
