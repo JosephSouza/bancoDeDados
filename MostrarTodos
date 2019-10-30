@@ -1,0 +1,28 @@
+package br.uninove.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.uninove.dao.Usuario;
+import br.uninove.dao.UsuarioDao;
+
+
+@WebServlet("/mostrartodos.do")
+public class MostrarTodosServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		UsuarioDao usuarioDao = new UsuarioDao();
+		ArrayList<Usuario> usuariosRecebidos = usuarioDao.mostrarTodos();
+		
+		request.setAttribute("usuarios", usuariosRecebidos);
+		request.getRequestDispatcher("mostrartodos.jsp").forward(request,response);
+		
+		
